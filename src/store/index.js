@@ -60,6 +60,8 @@ export default new Vuex.Store({
     },
     setWonFlag(state, payload) {
       state.wonFlag = true;
+      state.idcounter = 1;
+      state.gameoverFlag = false;
       state.endTime = performance.now();
       var timeMillSec = state.endTime - state.startTime;
       state.gameStats.timeCurrent = Math.round(timeMillSec / 100) / 10;
