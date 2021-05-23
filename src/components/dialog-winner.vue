@@ -6,7 +6,7 @@
           >You're a Winner!</span
         >
         <span class="myfont" v-if="this.$store.state.highScoreFlag"
-          >Woohoo! A new record!</span
+          >Yeah! A new record!</span
         >
       </v-card-title>
       <BR />
