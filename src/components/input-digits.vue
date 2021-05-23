@@ -68,7 +68,7 @@
 
     <dialog-winner
       v-if="dialogs.winner"
-      @hidedialog="dialogs.winner = false"
+      @hidedialogwinner="hidedialogwinner()"
       @playagain="playAgain()"
       @resethighscores="resethighscores()"
     />
@@ -117,9 +117,6 @@ export default {
   methods: {
     submitNumber() {
       this.$store.dispatch("submitNumber");
-      if (this.$store.state.gameoverFlag == true) {
-        this.dialogs.gameover = true;
-      }
 
       if (this.$store.state.rightNumberRightPlace == 4) {
         this.$store.dispatch("setWonFlag");
@@ -129,6 +126,11 @@ export default {
           this.$confetti.stop();
         }, 3000);
       }
+
+      if (this.$store.state.gameoverFlag == true) {
+        this.dialogs.gameover = true;
+      }
+
     },
     clearNumber() {
       this.$store.commit("keypadDelete");
@@ -144,6 +146,10 @@ export default {
       localStorage.removeItem("answerHigh");
       localStorage.removeItem("timeHigh");
     },
+    hidedialogwinner() {
+      this.dialogs.winner = false;
+      this.$store.commit("showWinnerMove"); //avoid gameover dialog from showing
+    }
   },
 };
 </script>

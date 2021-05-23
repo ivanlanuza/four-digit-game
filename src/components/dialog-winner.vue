@@ -46,7 +46,7 @@
           Reset High Scores
         </v-btn>
         <v-spacer></v-spacer>
-        <v-btn text @click="$emit('hidedialog')"> CLOSE </v-btn>
+        <v-btn text @click="$emit('hidedialogwinner')"> CLOSE </v-btn>
         <v-btn outlined color="green" text @click="$emit('playagain')">
           Play Again
         </v-btn>

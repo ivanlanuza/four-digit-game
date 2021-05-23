@@ -79,8 +79,11 @@ export default new Vuex.Store({
     },
     ellieMode(state) {
       state.answer = ["1", "0", "2", "3"];
+    },
+    showWinnerMove(state) {
+      state.idcounter = 1;
+      state.gameoverFlag = false;
     }
-
   },
   actions: {
     generateRandomDigit(state) {
@@ -96,7 +99,7 @@ export default new Vuex.Store({
         return o;
       }
 
-      //console.log("answerkey: " + randomDigits); //remove later
+      console.log("answerkey: " + randomDigits); //remove later
     },
     submitNumber(state) {
       var counter = 0;
