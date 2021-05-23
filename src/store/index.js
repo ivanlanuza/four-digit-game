@@ -99,7 +99,7 @@ export default new Vuex.Store({
         return o;
       }
 
-      console.log("answerkey: " + randomDigits); //remove later
+      //console.log("answerkey: " + randomDigits); //remove later
     },
     submitNumber(state) {
       var counter = 0;
