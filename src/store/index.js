@@ -59,7 +59,7 @@ export default new Vuex.Store({
       state.gameoverFlag = true;
     },
     setWonFlag(state, payload) {
-      console.log(payload);
+      //console.log(payload);
 
       state.wonFlag = true;
       state.idcounter = 1;
@@ -74,7 +74,7 @@ export default new Vuex.Store({
         state.gameStats.timeHigh = state.gameStats.timeCurrent;
         localStorage.setItem("timeHigh", state.gameStats.timeCurrent);
         state.highScoreFlag = true;
-        console.log(state.gameStats.timeCurrent);
+        //console.log(state.gameStats.timeCurrent);
       }
 
       state.gameStats.answerCurrent = payload.answerCurrent;
@@ -102,7 +102,7 @@ export default new Vuex.Store({
         return o;
       }
 
-      console.log("answerkey: " + randomDigits); //remove later
+      //console.log("token: " + randomDigits); //remove later
     },
     submitNumber(state) {
       var counter = 0;
