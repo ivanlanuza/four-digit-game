@@ -1,11 +1,10 @@
 <template>
-  <v-sheet rounded="lg" class="pa-6 mt-6 text-center">
+  <div class="text-center">
+  <!--<v-sheet rounded="lg" class="pa-2 mt-6 text-center">-->
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(1)"
@@ -15,9 +14,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(2)"
@@ -27,9 +24,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(3)"
@@ -39,9 +34,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(4)"
@@ -51,9 +44,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(5)"
@@ -63,9 +54,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(6)"
@@ -75,9 +64,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(7)"
@@ -87,9 +74,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(8)"
@@ -99,9 +84,7 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(9)"
@@ -111,16 +94,15 @@
     <v-btn
       :x-large=!$vuetify.breakpoint.xs
       :medium=$vuetify.breakpoint.xs
-      outlined
       plain
-      rounded
       color="primary"
       class="ma-1"
       @click="keypadEntry(0)"
       :disabled="checkZero"
       >0</v-btn
     >
-  </v-sheet>
+  <!--</v-sheet>-->
+  </div>
 </template>
 
 <script>

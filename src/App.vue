@@ -1,6 +1,6 @@
 <template>
   <v-app >
-    <v-main>
+    <v-main :class="$vuetify.breakpoint.xs ? 'pt-10' : 'pt-16'">
       <router-view></router-view>
     </v-main>
   </v-app>

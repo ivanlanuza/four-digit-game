@@ -5,13 +5,13 @@
     <v-main class="grey lighten-3">
       <v-container class="pt-0">
         <v-row>
-          <v-col cols="12" md="4" class="text-right">
+          <v-col cols="12" md="4">
             <input-digits />
-            <keypad />
+            
           </v-col>
 
           <v-col>
-            <v-sheet min-height="62vh" rounded="lg" class="pa-6">
+            <v-sheet min-height="55vh" rounded="lg" class="pa-6">
               <result-table :resultsdata="resultsdata" />
             </v-sheet>
           </v-col>
@@ -30,7 +30,6 @@ export default {
     "result-table": require("@/components/result-table.vue").default,
     navbar: require("@/components/navbar.vue").default,
     "input-digits": require("@/components/input-digits.vue").default,
-    keypad: require("@/components/keypad.vue").default,
   },
   computed: {
     resultsdata: {

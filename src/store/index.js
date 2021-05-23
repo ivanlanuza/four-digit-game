@@ -102,7 +102,7 @@ export default new Vuex.Store({
         return o;
       }
 
-      //console.log("token: " + randomDigits); //remove later
+      console.log("token: " + randomDigits); //remove later
     },
     submitNumber(state) {
       var counter = 0;
