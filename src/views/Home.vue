@@ -1,18 +1,48 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="inspire">
+    <navbar />
+
+    <v-main class="grey lighten-3">
+      <v-container class="pt-0">
+        <v-row>
+          <v-col cols="12" md="4" class="text-right">
+            <input-digits />
+            <keypad />
+          </v-col>
+
+          <v-col>
+            <v-sheet min-height="62vh" rounded="lg" class="pa-6">
+              <result-table :resultsdata="resultsdata" />
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
+  mounted() {
+    this.$store.dispatch("generateRandomDigit");
+  },
   components: {
-    HelloWorld
-  }
-}
+    "result-table": require("@/components/result-table.vue").default,
+    navbar: require("@/components/navbar.vue").default,
+    "input-digits": require("@/components/input-digits.vue").default,
+    keypad: require("@/components/keypad.vue").default,
+  },
+  computed: {
+    resultsdata: {
+      get() {
+        return this.$store.getters["getResults"];
+      },
+      currententry: {
+        get() {
+          return this.$store.getters["getCurrentEntry"];
+        },
+      },
+    },
+  },
+};
 </script>
