@@ -17,6 +17,7 @@ export default new Vuex.Store({
     timerOnFlag: false,
     startTime: null,
     endTime: null,
+    gameStart: false,
     gameStats: {
       answerCurrent: null,
       answerHigh: null,
@@ -38,6 +39,7 @@ export default new Vuex.Store({
       if (state.timerOnFlag === false) {
         state.startTime = performance.now();
         state.timerOnFlag = true;
+        state.gameStart = true;
       }
     },
     keypadDelete(state) {
@@ -54,6 +56,7 @@ export default new Vuex.Store({
       state.startTime = null;
       state.endTime = null;
       state.timerOnFlag = false;
+      state.gameStart = false;
     },
     setGameover(state) {
       state.gameoverFlag = true;

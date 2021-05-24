@@ -3,7 +3,7 @@
     <v-app-bar app color="white" flat>
       <v-container class="py-0 fill-height">
         <div v-show="!$vuetify.breakpoint.xs">
-          <v-icon class="ml-4 mr-2">mdi-dialpad</v-icon>Four Digits Game
+          <v-icon class="ml-4 mr-2">mdi-dialpad</v-icon>Four-Digit Game
         </div>
         <v-spacer></v-spacer>
 
