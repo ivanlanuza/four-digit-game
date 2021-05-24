@@ -1,7 +1,6 @@
 <template>
-  <v-app id="inspire">
+  <div>
     <navbar />
-
     <v-main class="grey lighten-3">
       <v-container class="pt-0">
         <v-row>
@@ -18,7 +17,7 @@
         </v-row>
       </v-container>
     </v-main>
-  </v-app>
+  </div>
 </template>
 
 <script>

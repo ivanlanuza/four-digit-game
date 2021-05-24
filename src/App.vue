@@ -1,6 +1,6 @@
 <template>
   <v-app >
-    <v-main :class="$vuetify.breakpoint.xs ? 'pt-10' : 'pt-16'">
+    <v-main :class="$vuetify.breakpoint.xs ? 'pt-10 grey lighten-3' : 'pt-16 grey lighten-3'"> 
       <router-view></router-view>
     </v-main>
   </v-app>
